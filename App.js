@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Pressable } from 'react-native';
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Image, SafeAreaView, StatusBar, ScrollView, Pressable } from 'react-native';
 
 export const Button = ({ title }) => {
   return (
@@ -15,7 +15,7 @@ export const Button = ({ title }) => {
 
 export default function App() {
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1, marginTop: StatusBar.currentHeight}}>
       {/* <ScrollView> */}
         {/* <View style={{ height: 30, backgroundColor: "red" }}>
           <Text style={{ fontSize: 20 }}>Hello World!!</Text>
